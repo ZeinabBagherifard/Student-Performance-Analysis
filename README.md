@@ -9,6 +9,7 @@ The notebook includes:
 - Exploratory data analysis
 - Basic statistical insights and correlations
 - A pass/fail classification model built with `scikit-learn` (Logistic Regression and Random Forest)
+- Model deployment: exporting the trained model with `pickle` and using it to predict the outcome for a new, unseen student
 
 This notebook was originally developed as part of a university course assignment and later refined for portfolio purposes.
 
@@ -24,6 +25,12 @@ model. Two models are trained and compared:
 - **Random Forest** — a non-linear ensemble model, also used to inspect feature importance
 
 Both are evaluated with accuracy, a classification report (precision/recall/F1), and confusion matrices.
+
+## Model deployment
+
+The trained Random Forest pipeline is serialized with `pickle`, reloaded from disk, and used to predict whether a
+hypothetical new student (not part of the original dataset) is likely to pass, demonstrating how the model could be
+reused in a real application without retraining.
 
 ## Dataset
 Student Performance Dataset  
